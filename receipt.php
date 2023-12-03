@@ -104,7 +104,7 @@ try {
     $twilio = new Client($twilioSid, $twilioToken);
 
     // Customize the WhatsApp message for a successful booking
-    $message = "Thank you, $name, for booking your slot with us!\n\n";
+    $message = "Thank you, $name, for booking your slot with us!!\n\n";
     $message .= "Booking Summary\n";
     $message .= "Email: $email\n";
     $message .= "Contact: $contact\n";

@@ -1,6 +1,6 @@
 # Badminton Reservation System
 
-Welcome to the Badminton Reservation System! This system allows users to easily reserve badminton courts and facilitates efficient management for sports facility administrators.
+Welcome to the Badminton Reservation System! This system simplifies the process of reserving badminton courts, catering to both users and administrators managing sports facilities.
 
 ## Table of Contents
 
@@ -8,8 +8,12 @@ Welcome to the Badminton Reservation System! This system allows users to easily 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Folder Structure](#folder-structure)
+- [Database Structure](#database-structure)
 - [API Documentation](#api-documentation)
+- [Project Structure](#project-structure)
+- [Razorpay Integration](#razorpay-integration)
+- [SMS Integration](#sms-integration)
+- [WhatsApp Integration](#whatsapp-integration)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -30,7 +34,7 @@ The Badminton Reservation System is a web-based application developed to simplif
 - **Frontend**: React with Create React App
 - **Backend**: PHP with Yii2
 - **Real-Time Features**: Node.js
-- **Database**: [Your Database System]
+- **Database**: MySQL
 - **Authentication**: [Your Authentication Method]
 
 ## Getting Started

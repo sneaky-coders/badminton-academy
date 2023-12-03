@@ -62,7 +62,7 @@ $conn->close();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>DreamSports</title>
+	<title>Badminton Academy</title>
 
 	<!-- Meta Tags -->
 	<meta name="twitter:description" content="Elevate your badminton business with Dream Sports template. Empower coaches & players, optimize court performance and unlock industry-leading success for your brand.">
@@ -71,17 +71,17 @@ $conn->close();
 
 	<meta name="description" content="Elevate your badminton business with Dream Sports template. Empower coaches & players, optimize court performance and unlock industry-leading success for your brand.">
 	<meta name="keywords" content="badminton, coaching, event, players, training, courts, tournament, athletes, courts rent, lessons, court booking, stores, sports faqs, leagues, chat, wallet, invoice">
-	<meta name="author" content="Dreamguys - DreamSports">
+	<meta name="author" content="Dreamguys - Badminton Academy">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@dreamguystech">
-	<meta name="twitter:title" content="DreamSports -  Booking Coaches, Venue for tournaments, Court Rental template">
+	<meta name="twitter:title" content="Badminton Academy -  Booking Coaches, Venue for tournaments, Court Rental template">
 
 	<meta name="twitter:image" content="assets/img/meta-image.jpg">
-	<meta name="twitter:image:alt" content="DreamSports">
+	<meta name="twitter:image:alt" content="Badminton Academy">
 
-	<meta property="og:url" content="https://dreamsports.dreamguystech.com/">
-	<meta property="og:title" content="DreamSports -  Booking Coaches, Venue for tournaments, Court Rental template">
+	<meta property="og:url" content="https://Badminton Academy.dreamguystech.com/">
+	<meta property="og:title" content="Badminton Academy -  Booking Coaches, Venue for tournaments, Court Rental template">
 	<meta property="og:description" content="Elevate your badminton business with Dream Sports template. Empower coaches & players, optimize court performance and unlock industry-leading success for your brand.">
 	<meta property="og:image" content="/assets/img/meta-image.jpg">
 	<meta property="og:image:secure_url" content="assets/img/meta-image.jpg">
@@ -532,7 +532,7 @@ $conn->close();
 									</div>
 									<div class="footer-call">
 										<span>Need Live Suppot</span>
-										<p>dreamsports@example.com</p>
+										<p>Badminton Academy@example.com</p>
 									</div>
 								</div>
 								<div class="social-icon">
@@ -678,7 +678,7 @@ $conn->close();
 						<div class="row align-items-center">
 							<div class="col-md-6">
 								<div class="copyright-text">
-									<p class="mb-0">&copy; 2023 DreamSports  - All rights reserved.</p>
+									<p class="mb-0">&copy; 2023 Badminton Academy  - All rights reserved.</p>
 								</div>
 							</div>
 							<div class="col-md-6">

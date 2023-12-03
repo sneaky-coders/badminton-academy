@@ -1,6 +1,6 @@
 /*
 Author       : Dreamguys
-Template Name: DreamSports  - Bootstrap Template
+Template Name: Badminton Academy  - Bootstrap Template
 Version      : 1.0
 */
 

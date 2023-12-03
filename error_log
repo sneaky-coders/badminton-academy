@@ -1,0 +1,296 @@
+[29-Nov-2023 21:32:58 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:34:04 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:34:08 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:37:41 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:38:22 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:44:00 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[29-Nov-2023 21:44:00 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[29-Nov-2023 21:44:00 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:44:18 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:45:58 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:49:00 America/Boise] PHP Notice:  Undefined variable: twilioSid in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 83
+[29-Nov-2023 21:49:00 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[29-Nov-2023 21:58:10 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php:50
+Stack trace:
+#0 {main}
+  thrown in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 50
+[29-Nov-2023 21:58:59 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php:50
+Stack trace:
+#0 {main}
+  thrown in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 50
+[29-Nov-2023 22:03:47 America/Boise] PHP Notice:  Undefined variable: userPhoneNumber in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 117
+[29-Nov-2023 22:03:47 America/Boise] Exception: Twilio credentials or user phone number not set.
+[29-Nov-2023 22:05:11 America/Boise] PHP Notice:  Undefined variable: userPhoneNumber in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 117
+[29-Nov-2023 22:05:11 America/Boise] Exception: Twilio credentials or user phone number not set.
+[29-Nov-2023 22:05:14 America/Boise] PHP Notice:  Undefined variable: userPhoneNumber in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 117
+[29-Nov-2023 22:05:14 America/Boise] Exception: Twilio credentials or user phone number not set.
+[29-Nov-2023 22:06:14 America/Boise] PHP Notice:  Undefined variable: userPhoneNumber in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 117
+[29-Nov-2023 22:06:14 America/Boise] Exception: Twilio credentials or user phone number not set.
+[29-Nov-2023 22:08:32 America/Boise] PHP Notice:  Undefined variable: userph in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 117
+[29-Nov-2023 22:08:32 America/Boise] Exception: Twilio credentials or user phone number not set.
+[29-Nov-2023 22:09:35 America/Boise] Exception: [HTTP 400] Unable to create record: The 'To' number 636192XXXX is not a valid phone number
+[29-Nov-2023 22:12:23 America/Boise] Exception: [HTTP 400] Unable to create record: The 'To' number 636192XXXX is not a valid phone number
+[29-Nov-2023 22:13:16 America/Boise] Exception: [HTTP 400] Unable to create record: The number +91636192XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +91636192XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+[29-Nov-2023 22:14:44 America/Boise] Exception: [HTTP 400] Unable to create record: The number +91636192XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +91636192XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+[29-Nov-2023 22:15:35 America/Boise] Exception: [HTTP 400] Unable to create record: The 'To' number 636192XXXX is not a valid phone number
+[29-Nov-2023 22:17:20 America/Boise] Exception: [HTTP 400] Unable to create record: The 'To' number 636192XXXX is not a valid phone number
+[29-Nov-2023 22:21:46 America/Boise] Exception: [HTTP 400] Unable to create record: The number +91636192XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +91636192XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+[29-Nov-2023 22:31:48 America/Boise] Exception: [HTTP 400] Unable to create record: The 'To' number +91+91636192XXXX is not a valid phone number
+[29-Nov-2023 22:32:04 America/Boise] Exception: [HTTP 400] Unable to create record: The number +91636192XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +91636192XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+[29-Nov-2023 22:33:58 America/Boise] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 37
+[29-Nov-2023 22:33:58 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 37
+[29-Nov-2023 22:33:58 America/Boise] Exception: Connection failed: php_network_getaddresses: getaddrinfo failed: Name or service not known
+[29-Nov-2023 22:33:58 America/Boise] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 83
+[29-Nov-2023 22:37:23 America/Boise] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 37
+[29-Nov-2023 22:37:23 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 37
+[29-Nov-2023 22:37:23 America/Boise] Exception: Connection failed: php_network_getaddresses: getaddrinfo failed: Name or service not known
+[29-Nov-2023 22:37:23 America/Boise] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 83
+[29-Nov-2023 22:38:20 America/Boise] Exception: [HTTP 400] Unable to create record: The number +91636192XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +91636192XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+[29-Nov-2023 22:38:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function sendSmsToUser() in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:62
+Stack trace:
+#0 {main}
+  thrown in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 62
+[29-Nov-2023 22:40:02 America/Boise] Exception: [HTTP 400] Unable to create record: The number +91636192XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +91636192XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+[29-Nov-2023 22:40:49 America/Boise] Exception: [HTTP 400] Unable to create record: The number +91636192XXXX is unverified. Trial accounts cannot send messages to unverified numbers; verify +91636192XXXX at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number to send messages to unverified numbers
+[29-Nov-2023 23:25:11 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 14
+[29-Nov-2023 23:25:11 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 15
+[29-Nov-2023 23:25:12 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:14) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[29-Nov-2023 23:27:40 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 14
+[29-Nov-2023 23:27:40 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 15
+[29-Nov-2023 23:27:41 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:14) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[29-Nov-2023 23:27:58 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 67
+[29-Nov-2023 23:27:58 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 71
+[29-Nov-2023 23:29:09 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 67
+[29-Nov-2023 23:29:09 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 71
+[29-Nov-2023 23:29:23 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[29-Nov-2023 23:29:24 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:13) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[29-Nov-2023 23:31:22 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[29-Nov-2023 23:31:22 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:13) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[29-Nov-2023 23:33:00 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[29-Nov-2023 23:33:00 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:13) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[29-Nov-2023 23:33:48 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[29-Nov-2023 23:33:49 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:13) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[29-Nov-2023 23:34:40 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[29-Nov-2023 23:34:41 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:13) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[29-Nov-2023 23:34:49 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:34:49 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:34:50 America/Boise] PHP Notice:  Undefined variable: orderId in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 195
+[29-Nov-2023 23:34:50 America/Boise] PHP Notice:  Undefined variable: orderId in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 199
+[29-Nov-2023 23:36:32 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:36:32 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:37:03 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:37:03 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:37:04 America/Boise] PHP Notice:  Undefined variable: orderId in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 196
+[29-Nov-2023 23:37:04 America/Boise] PHP Notice:  Undefined variable: orderId in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 200
+[29-Nov-2023 23:38:39 America/Boise] PHP Notice:  Undefined index: amt in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 16
+[29-Nov-2023 23:44:57 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 22
+[29-Nov-2023 23:44:57 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 26
+[29-Nov-2023 23:48:16 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:48:16 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:49:26 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:49:26 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:51:19 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:51:19 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:51:38 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:51:38 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:53:10 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:53:10 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:55:12 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:55:12 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:56:25 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:56:25 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:57:23 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[29-Nov-2023 23:57:23 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[29-Nov-2023 23:59:52 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[30-Nov-2023 00:00:02 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[30-Nov-2023 00:04:24 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[30-Nov-2023 00:04:24 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[30-Nov-2023 00:05:27 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[30-Nov-2023 00:05:27 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[30-Nov-2023 00:06:27 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[30-Nov-2023 00:06:27 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[30-Nov-2023 00:08:00 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 22
+[30-Nov-2023 00:08:00 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 26
+[30-Nov-2023 00:11:31 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 32
+[30-Nov-2023 00:11:31 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 36
+[30-Nov-2023 00:13:01 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/detials.php on line 65
+[30-Nov-2023 00:13:01 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/detials.php on line 66
+[30-Nov-2023 00:15:58 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/detials.php on line 65
+[30-Nov-2023 00:15:58 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/detials.php on line 66
+[30-Nov-2023 00:16:40 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 65
+[30-Nov-2023 00:16:40 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 66
+[30-Nov-2023 00:19:32 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 14
+[30-Nov-2023 00:19:32 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 15
+[30-Nov-2023 00:19:33 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:14) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 50
+[30-Nov-2023 00:21:55 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 20
+[30-Nov-2023 00:21:55 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 21
+[30-Nov-2023 00:21:55 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:20) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 38
+[30-Nov-2023 00:24:00 America/Boise] Exception: Error: 'customer_name' is not set.
+[30-Nov-2023 00:24:37 America/Boise] Exception: Error: 'customer_name' is not set.
+[30-Nov-2023 01:39:15 America/Boise] Exception: Error: 'customer_name' is not set.
+[30-Nov-2023 01:43:47 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 66
+[30-Nov-2023 01:43:47 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 67
+[30-Nov-2023 01:45:20 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 49
+[30-Nov-2023 01:45:20 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 50
+[30-Nov-2023 01:46:41 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 49
+[30-Nov-2023 01:46:41 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 50
+[30-Nov-2023 01:50:31 America/Boise] PHP Notice:  Undefined index: customer_name in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 49
+[30-Nov-2023 01:50:31 America/Boise] PHP Notice:  Undefined index: customer_email in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 50
+[30-Nov-2023 01:57:05 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 115
+[30-Nov-2023 01:57:05 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 116
+[30-Nov-2023 02:03:50 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 115
+[30-Nov-2023 02:03:50 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 116
+[30-Nov-2023 02:06:26 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 115
+[30-Nov-2023 02:06:26 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 116
+[30-Nov-2023 02:06:58 America/Boise] Exception: Twilio credentials or admin phone number not set.
+[30-Nov-2023 02:11:17 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function sanitize_input() in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php:50
+Stack trace:
+#0 {main}
+  thrown in /home3/idzzdcmy/public_html/createmysiteco/badminton/pay.php on line 50
+[30-Nov-2023 14:50:57 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php:37) in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 43
+[30-Nov-2023 14:52:02 America/Boise] PHP Warning:  A non-numeric value encountered in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 505
+[30-Nov-2023 21:29:55 America/Boise] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ';' or ',' in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 48
+[30-Nov-2023 21:30:21 America/Boise] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ';' or ',' in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 48
+[30-Nov-2023 21:30:36 America/Boise] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ';' or ',' in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 49
+[30-Nov-2023 21:57:42 America/Boise] PHP Warning:  mysqli_stmt::close(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 52
+[30-Nov-2023 21:57:42 America/Boise] PHP Warning:  mysqli::close(): Couldn't fetch mysqli in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 59
+[30-Nov-2023 21:58:43 America/Boise] PHP Warning:  mysqli_stmt::close(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 53
+[30-Nov-2023 21:59:06 America/Boise] PHP Warning:  mysqli_stmt::close(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 50
+[30-Nov-2023 21:59:58 America/Boise] PHP Warning:  mysqli_stmt::close(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 53
+[30-Nov-2023 21:59:58 America/Boise] PHP Warning:  main(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking-confirm.php on line 55
+[30-Nov-2023 22:05:50 America/Boise] PHP Warning:  mysqli_stmt::close(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 443
+[30-Nov-2023 22:05:50 America/Boise] PHP Warning:  main(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 445
+[30-Nov-2023 22:07:02 America/Boise] PHP Warning:  mysqli_stmt::close(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 433
+[30-Nov-2023 22:07:02 America/Boise] PHP Warning:  main(): Couldn't fetch mysqli_stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 435
+[30-Nov-2023 22:07:44 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 744
+[30-Nov-2023 22:09:09 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php:26
+Stack trace:
+#0 {main}
+  thrown in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 26
+[30-Nov-2023 22:09:49 America/Boise] PHP Notice:  Undefined variable: stmt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 28
+[30-Nov-2023 22:09:49 America/Boise] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php:28
+Stack trace:
+#0 {main}
+  thrown in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 28
+[30-Nov-2023 22:50:40 America/Boise] PHP Notice:  Undefined index: amt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 17
+[30-Nov-2023 22:51:39 America/Boise] PHP Notice:  Undefined index: amt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 17
+[30-Nov-2023 22:52:19 America/Boise] PHP Notice:  Undefined variable: baseAmount in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 23
+[30-Nov-2023 22:52:19 America/Boise] PHP Notice:  Undefined variable: baseAmount in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 27
+[30-Nov-2023 23:02:16 America/Boise] PHP Notice:  Undefined variable: baseAmount in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 23
+[30-Nov-2023 23:02:16 America/Boise] PHP Notice:  Undefined variable: baseAmount in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 27
+[30-Nov-2023 23:04:19 America/Boise] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 62
+[30-Nov-2023 23:05:57 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 565
+[30-Nov-2023 23:05:57 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 566
+[30-Nov-2023 23:05:57 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 572
+[30-Nov-2023 23:05:57 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 856
+[30-Nov-2023 23:05:57 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 857
+[30-Nov-2023 23:07:29 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 864
+[30-Nov-2023 23:08:09 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 565
+[30-Nov-2023 23:08:09 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 566
+[30-Nov-2023 23:08:09 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 572
+[30-Nov-2023 23:08:09 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 856
+[30-Nov-2023 23:08:09 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 857
+[30-Nov-2023 23:13:02 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 570
+[30-Nov-2023 23:13:03 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 571
+[30-Nov-2023 23:13:03 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 590
+[30-Nov-2023 23:13:03 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 874
+[30-Nov-2023 23:13:03 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 875
+[30-Nov-2023 23:22:30 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 570
+[30-Nov-2023 23:22:30 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 571
+[30-Nov-2023 23:22:30 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 590
+[30-Nov-2023 23:22:30 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 874
+[30-Nov-2023 23:22:30 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 875
+[30-Nov-2023 23:23:18 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 572
+[30-Nov-2023 23:23:18 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 573
+[30-Nov-2023 23:23:18 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 592
+[30-Nov-2023 23:23:18 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 876
+[30-Nov-2023 23:23:18 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 877
+[30-Nov-2023 23:24:24 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 585
+[30-Nov-2023 23:24:24 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 586
+[30-Nov-2023 23:24:24 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 610
+[30-Nov-2023 23:24:24 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 894
+[30-Nov-2023 23:24:24 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 895
+[30-Nov-2023 23:25:11 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 585
+[30-Nov-2023 23:25:11 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 586
+[30-Nov-2023 23:25:11 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 610
+[30-Nov-2023 23:25:11 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 894
+[30-Nov-2023 23:25:11 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 895
+[30-Nov-2023 23:26:09 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 585
+[30-Nov-2023 23:26:09 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 586
+[30-Nov-2023 23:26:09 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 610
+[30-Nov-2023 23:26:09 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 894
+[30-Nov-2023 23:26:09 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 895
+[30-Nov-2023 23:29:39 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 585
+[30-Nov-2023 23:29:39 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 586
+[30-Nov-2023 23:29:39 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 610
+[30-Nov-2023 23:29:39 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 894
+[30-Nov-2023 23:29:39 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 895
+[30-Nov-2023 23:31:21 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 932
+[30-Nov-2023 23:31:55 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 585
+[30-Nov-2023 23:31:55 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 586
+[30-Nov-2023 23:31:55 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 610
+[30-Nov-2023 23:31:55 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 894
+[30-Nov-2023 23:31:55 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 895
+[30-Nov-2023 23:35:35 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 147
+[30-Nov-2023 23:35:35 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 148
+[30-Nov-2023 23:35:35 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 608
+[30-Nov-2023 23:35:35 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 892
+[30-Nov-2023 23:35:35 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 893
+[30-Nov-2023 23:37:26 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 147
+[30-Nov-2023 23:37:26 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 148
+[30-Nov-2023 23:37:26 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 608
+[30-Nov-2023 23:37:26 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 892
+[30-Nov-2023 23:37:26 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 893
+[30-Nov-2023 23:38:15 America/Boise] PHP Notice:  Undefined variable: total in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 130
+[30-Nov-2023 23:38:15 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 136
+[30-Nov-2023 23:38:15 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 137
+[30-Nov-2023 23:38:15 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 593
+[30-Nov-2023 23:38:15 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 878
+[30-Nov-2023 23:38:15 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 879
+[30-Nov-2023 23:38:53 America/Boise] PHP Notice:  Undefined variable: total in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 130
+[30-Nov-2023 23:38:53 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 136
+[30-Nov-2023 23:38:53 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 137
+[30-Nov-2023 23:38:53 America/Boise] PHP Notice:  Undefined variable: Id in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 593
+[30-Nov-2023 23:38:53 America/Boise] PHP Notice:  Undefined variable: customerName in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 878
+[30-Nov-2023 23:38:53 America/Boise] PHP Notice:  Undefined variable: customerEmail in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 879
+[30-Nov-2023 23:45:28 America/Boise] PHP Notice:  Undefined index: amt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 17
+[30-Nov-2023 23:45:47 America/Boise] PHP Notice:  Undefined index: amt in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 17
+[30-Nov-2023 23:49:54 America/Boise] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 63
+[30-Nov-2023 23:53:25 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 922
+[30-Nov-2023 23:54:15 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 925
+[30-Nov-2023 23:56:39 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 927
+[30-Nov-2023 23:58:05 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 808
+[30-Nov-2023 23:59:21 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 808
+[30-Nov-2023 23:59:50 America/Boise] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 808
+[01-Dec-2023 00:07:10 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:07:10 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[01-Dec-2023 00:07:11 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 48
+[01-Dec-2023 00:08:40 America/Boise] PHP Notice:  Undefined variable: orderId in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 749
+[01-Dec-2023 00:08:56 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:08:56 America/Boise] PHP Notice:  Undefined index: razorpay_payment_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 13
+[01-Dec-2023 00:08:57 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 48
+[01-Dec-2023 00:09:24 America/Boise] PHP Notice:  Undefined variable: orderId in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 749
+[01-Dec-2023 00:09:28 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:09:28 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 48
+[01-Dec-2023 00:13:09 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:13:10 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 48
+[01-Dec-2023 00:13:15 America/Boise] PHP Notice:  Undefined variable: orderId in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 749
+[01-Dec-2023 00:13:19 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:13:19 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 48
+[01-Dec-2023 00:15:57 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:15:57 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 46
+[01-Dec-2023 00:16:29 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:16:30 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 46
+[01-Dec-2023 00:17:53 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 857
+[01-Dec-2023 00:18:02 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 857
+[01-Dec-2023 00:18:38 America/Boise] PHP Parse error:  syntax error, unexpected end of file in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 856
+[01-Dec-2023 00:25:08 America/Boise] PHP Notice:  Undefined index: razorpay_order_id in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 12
+[01-Dec-2023 00:25:08 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php:12) in /home3/idzzdcmy/public_html/createmysiteco/badminton/success.php on line 46
+[01-Dec-2023 00:27:20 America/Boise] PHP Notice:  Undefined index: name in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 9
+[01-Dec-2023 00:27:20 America/Boise] PHP Notice:  Undefined index: email in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 10
+[01-Dec-2023 00:27:37 America/Boise] PHP Notice:  Undefined index: name in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 9
+[01-Dec-2023 00:27:37 America/Boise] PHP Notice:  Undefined index: email in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 10
+[01-Dec-2023 00:31:52 America/Boise] PHP Notice:  Undefined index: name in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 9
+[01-Dec-2023 00:31:52 America/Boise] PHP Notice:  Undefined index: email in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 10
+[01-Dec-2023 00:32:19 America/Boise] PHP Notice:  Undefined index: name in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 9
+[01-Dec-2023 00:32:19 America/Boise] PHP Notice:  Undefined index: email in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 10

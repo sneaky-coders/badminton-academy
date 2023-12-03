@@ -1,0 +1,6 @@
+{
+    "require": {
+        "razorpay/razorpay": "^2.8",
+        "twilio/sdk": "^7.12"
+    }
+}

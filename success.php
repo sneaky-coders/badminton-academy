@@ -128,6 +128,7 @@ function sendSmsToAdmin($orderID, $transactionID, $courtId, $name, $email, $cont
 //Whatsapp Inegration
 
 
+session_start();
 include 'connection.php';
 require __DIR__ . '/vendor/autoload.php';
 
@@ -174,12 +175,17 @@ try {
 
         // Execute the statement
         if ($stmt->execute()) {
-            // Send WhatsApp message to admin
-            sendWhatsAppToAdmin($razorpayOrderId, $razorpayPaymentId, $courtId, $name, $email, $contact, $starttime, $endtime, $amount);
+            // Check if the message has already been sent
+            if (!isset($_SESSION['message_sent'])) {
+                // Send WhatsApp message to admin
+                sendWhatsAppToAdmin($razorpayOrderId, $razorpayPaymentId, $courtId, $name, $email, $contact, $starttime, $endtime, $amount);
 
-            // Redirect the user to the receipt page
-            #header("Location: receipt.php?razorpay_order_id=" . $razorpayOrderId . "&razorpay_payment_id=" . $razorpayPaymentId . "&name=" . $name . "&email=" . $email . "&contact=" . $contact . "&starttime=" . $starttime . "&endtime=" . $endtime . "&amount=" . $amount . "&court_id=" . $courtId);
-            header("Location:index.html");
+                // Set a flag in the session to indicate that the message has been sent
+                $_SESSION['message_sent'] = true;
+            }
+
+            // Redirect the user to the receipt page or another location
+            header("Location: index.html");
             exit;
         } else {
             throw new Exception("Error updating status: " . $stmt->error);
@@ -205,7 +211,7 @@ try {
 function sendWhatsAppToAdmin($orderID, $transactionID, $courtId, $name, $email, $contact, $starttime, $endtime, $amount)
 {
     // Use environment variables for Twilio credentials
-   $twilioSid = 'ACe9ce2ee5ba95c1a83dfda1af25849818';
+    $twilioSid = 'ACe9ce2ee5ba95c1a83dfda1af25849818';
     $twilioToken = 'a1b55469d62ec2c1749822fcf6665aa1';
     $twilioPhoneNumber = 'whatsapp:+14155238886'; // Twilio's WhatsApp number
     $adminPhoneNumber = 'whatsapp:+919096245373';
@@ -251,6 +257,4 @@ function sanitize_input($data)
     // Check if $data is not null before applying htmlspecialchars
     return $data !== null ? htmlspecialchars($data, ENT_QUOTES, 'UTF-8') : null;
 }
-?>
-
 ?>

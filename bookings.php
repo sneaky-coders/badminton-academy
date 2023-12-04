@@ -573,11 +573,11 @@
 
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" name="namee" class="form-control" id="name" placeholder="Enter Name">
+            <input type="text" name="namee" class="form-control" id="name" placeholder="Enter Name" required>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Address">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Address" required>
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Phone Number</label>
@@ -586,7 +586,7 @@
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Your Address</label>
-            <input type="text" name="address" class="form-control" id="address" placeholder="Enter Address">
+            <input type="text" name="address" class="form-control" id="address" placeholder="Enter Address" required>
         </div>
 
         <button type="submit" class="btn btn-secondary btn-icon mt-3">

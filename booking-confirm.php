@@ -1,11 +1,11 @@
 <?php
-// Assuming you have a MySQL database connection
+session_start();
 include 'connection.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Check if 'id' is set and is a valid integer
-$id = $_GET['id'];
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 if ($id <= 0) {
     // Handle the case when 'id' is not valid
     echo "Invalid ID provided.";
@@ -15,40 +15,48 @@ if ($id <= 0) {
 // Use prepared statement to prevent SQL injection
 $sql = "SELECT name, email, contact, address, date, starttime, endtime, adults, children, young_children FROM court WHERE id = ?";
 $stmt = $conn->prepare($sql);
+
+// Check if the statement was prepared successfully
+if (!$stmt) {
+    // Handle the case when the statement preparation fails
+    echo "Error preparing SQL statement: " . $conn->error;
+    exit();
+}
+
+// Bind the 'id' parameter
 $stmt->bind_param("i", $id);
 
+// Execute the statement
+if ($stmt->execute()) {
+    // Bind the result variables
+    $stmt->bind_result($name, $email, $contact, $address, $appointmentDate, $startTime, $endTime, $adults, $children, $young);
 
+    // Fetch the result
+    $stmt->fetch();
 
-// Check if the statements were prepared successfully
-if ($stmt ) {
-    // Execute the first statement
-    if ($stmt->execute()) {
-        // Bind the result variables
-        $stmt->bind_result($name, $email, $contact, $address, $appointmentDate, $startTime, $endTime, $adults, $children, $young);
+    // Check if data was found
+    if (!empty($name)) {
+        // Data found, set session variables
+        $_SESSION['booking_success'] = true;
+        $_SESSION['booking_id'] = $id;
 
-        // Fetch the result
-        $stmt->fetch();
-
-        // Check if data was found
-        if (!empty($name)) {
-        
-        } else {
-            echo "No data found for the provided ID.";
-        }
+        // Set a session variable to indicate that the user is allowed to go back
+        $_SESSION['allow_go_back'] = true;
     } else {
-        // Handle the case when the statement execution fails
-        echo "Error executing SQL statement: " . $stmt->error;
+        echo "No data found for the provided ID.";
     }
-
-    // Close the first statement
-    $stmt->close();
-
-    // Execute the second statement
+} else {
+    // Handle the case when the statement execution fails
+    echo "Error executing SQL statement: " . $stmt->error;
 }
+
+// Close the statement
+$stmt->close();
 
 // Close the database connection
 $conn->close();
 ?>
+
 
 
 
@@ -108,6 +116,19 @@ $conn->close();
 
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
+
+	<script>
+        // Check if the session variable allows going back
+        <?php if(isset($_SESSION['allow_go_back']) && $_SESSION['allow_go_back']) : ?>
+            history.pushState(null, null, location.href);
+            window.onpopstate = function () {
+                history.go(1);
+            };
+        <?php endif; ?>
+
+        // Clear the session variable to prevent going back on subsequent visits
+        <?php unset($_SESSION['allow_go_back']); ?>
+    </script>
 
 </head>
 

@@ -178,8 +178,8 @@ try {
             sendWhatsAppToAdmin($razorpayOrderId, $razorpayPaymentId, $courtId, $name, $email, $contact, $starttime, $endtime, $amount);
 
             // Redirect the user to the receipt page
-            header("Location: receipt.php?razorpay_order_id=" . $razorpayOrderId . "&razorpay_payment_id=" . $razorpayPaymentId . "&name=" . $name . "&email=" . $email . "&contact=" . $contact . "&starttime=" . $starttime . "&endtime=" . $endtime . "&amount=" . $amount . "&court_id=" . $courtId);
-
+            #header("Location: receipt.php?razorpay_order_id=" . $razorpayOrderId . "&razorpay_payment_id=" . $razorpayPaymentId . "&name=" . $name . "&email=" . $email . "&contact=" . $contact . "&starttime=" . $starttime . "&endtime=" . $endtime . "&amount=" . $amount . "&court_id=" . $courtId);
+            header("Location:index.html");
             exit;
         } else {
             throw new Exception("Error updating status: " . $stmt->error);

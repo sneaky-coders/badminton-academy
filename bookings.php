@@ -581,7 +581,8 @@
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Phone Number</label>
-            <input type="text" name="contact" class="form-control" id="phonenumber" placeholder="Enter Phone Number">
+            <input name="contact" class="form-control" id="phonenumber" type="tel" pattern="[0-9]{10}" placeholder="Enter Phone Number" required>
+
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Your Address</label>
@@ -654,18 +655,40 @@
   </body>
 </html>
 <?php
-// Assuming you have a MySQL database connection
+// Start output buffering to prevent headers already sent error
+ob_start();
+
+// Start the session
+session_start();
+
+// Include the file with the MySQL database connection
 include 'connection.php';
+
+// Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Check the database connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Initialize or retrieve ID
-$id = $_GET['id'] /* your logic to get or set the id */;
+// Check if the session data is still valid
+if (isset($_SESSION['last_page']) && $_SESSION['last_page'] !== basename($_SERVER['PHP_SELF'])) {
+    // User navigated back or accessed a different page
+    // Clear relevant session data
+    unset($_SESSION['booking_success']);
+    unset($_SESSION['booking_data']);
+    unset($_SESSION['booking_error']);
+}
 
+// Store the current page in the session
+$_SESSION['last_page'] = basename($_SERVER['PHP_SELF']);
+
+// Initialize or retrieve the ID from the GET parameter
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+
+// Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
     $name = $_POST['namee'];
@@ -675,15 +698,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validate form data
     if (empty($name) || empty($email) || empty($contact) || empty($address)) {
-        echo "<script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Validation Error',
-                text: 'All fields are required. Please fill out the form completely.'
-            }).then(() => {
-                window.location.href = 'bookings.php'; // Redirect to the form page
-            });
-        </script>";
+        $_SESSION['booking_error'] = 'All fields are required. Please fill out the form completely.';
+        echo "<script>window.location.href = 'court-booking.html';</script>";
         exit();
     }
 
@@ -699,34 +715,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Execute the statement
     if ($stmt->execute()) {
-        // Redirect to the confirmation page
-        echo "<script>
-            Swal.fire({
-                icon: 'success',
-                title: 'Success',
-                text: 'Record updated successfully.'
-            }).then(() => {
-                window.location.href = 'booking-confirm.php?id=" . urlencode($id) . "';
-            });
-        </script>";
+        // Clear session variables
+        $_SESSION['booking_success'] = true;
+        unset($_SESSION['booking_data']);
+
+        // Redirect to the confirmation page using JavaScript
+        echo "<script>window.location.href = 'booking-confirm.php?id=$id';</script>";
         exit();
-        
     } else {
-        echo "<script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Error updating record: " . $stmt->error . "'
-            }).then(() => {
-                window.location.href = 'court-booking.html'; // Redirect to the form page
-            });
-        </script>";
+        $_SESSION['booking_error'] = 'Error updating record: ' . $stmt->error;
+        echo "<script>window.location.href = 'court-booking.html';</script>";
+        exit();
     }
 
-    // Close the statement
+    // Close the prepared statement
     $stmt->close();
-} 
+} else {
+    // Save form data in session if it's not a POST request
+    $_SESSION['booking_data'] = [
+        'name' => $_POST['namee'] ?? '',
+        'email' => $_POST['email'] ?? '',
+        'contact' => $_POST['contact'] ?? '',
+        'address' => $_POST['address'] ?? '',
+    ];
+}
 
 // Close the database connection
 $conn->close();
+
+// End output buffering and flush the output
+ob_end_flush();
 ?>

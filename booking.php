@@ -9,6 +9,7 @@
 </html>
 
 <?php
+session_start();
 // Assuming you have a MySQL database connection
 include 'connection.php';
 error_reporting(E_ALL);
@@ -44,6 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Close the prepared statement
             $stmt->close();
+
+            // Set session data for successful booking
+            $_SESSION['booking_success'] = true;
+            $_SESSION['booking_id'] = $id;
 
             // Use SweetAlert to display a success message and redirect
             echo "<script>

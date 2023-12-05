@@ -103,407 +103,57 @@
     <!-- Main Wrapper -->
     <div class="main-wrapper">
       <!-- Header -->
-      <header class="header header-sticky">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg header-nav">
-            <div class="navbar-header">
-              <a id="mobile_btn" href="javascript:void(0);">
-                <span class="bar-icon">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </a>
-              <a href="index.html" class="navbar-brand logo">
-                <img
-                  src="assets/img/logo-black.svg"
-                  class="img-fluid"
-                  alt="Logo"
-                />
-              </a>
-            </div>
-            <div class="main-menu-wrapper">
-              <div class="menu-header">
-                <a href="index.html" class="menu-logo">
-                  <img
-                    src="assets/img/logo-black.svg"
-                    class="img-fluid"
-                    alt="Logo"
-                  />
-                </a>
-                <a
-                  id="menu_close"
-                  class="menu-close"
-                  href="javascript:void(0);"
-                >
-                  <i class="fas fa-times"></i
-                ></a>
-              </div>
-              <ul class="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li class="has-submenu active">
-                  <a href="#">Coaches <i class="fas fa-chevron-down"></i></a>
-                  <ul class="submenu">
-                    <li class="has-submenu">
-                      <a href="#">Coaches Map</a>
-                      <ul class="submenu inner-submenu">
-                        <li><a href="coaches-map.html">Coaches Map</a></li>
-                        <li>
-                          <a href="coaches-map-sidebar.html"
-                            >Coaches Map Sidebar</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="coaches-grid.html">Coaches Grid</a></li>
-                    <li><a href="coaches-list.html">Coaches List</a></li>
-                    <li>
-                      <a href="coaches-grid-sidebar.html"
-                        >Coaches Grid Sidebar</a
-                      >
-                    </li>
-                    <li>
-                      <a href="coaches-list-sidebar.html"
-                        >Coaches List Sidebar</a
-                      >
-                    </li>
-                    <li class="has-submenu active">
-                      <a href="javascript:void(0);">Booking</a>
-                      <ul class="submenu">
-                        <li class="active">
-                          <a href="cage-details.html">Book a Court</a>
-                        </li>
-                        <li><a href="coach-details.html">Book a Coach</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="coach-detail.html">Coach Details</a></li>
-                    <li class="has-submenu">
-                      <a href="#">Venue</a>
-                      <ul class="submenu inner-submenu">
-                        <li><a href="listing-list.html">Venue List</a></li>
-                        <li><a href="venue-details.html">Venue Details</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="coach-dashboard.html">Coach Dashboard</a></li>
-                    <li><a href="all-court.html">Coach Courts</a></li>
-                    <li><a href="add-court.html">List Your Court</a></li>
-                    <li><a href="coach-chat.html">Chat</a></li>
-                    <li><a href="coach-earning.html">Earnings</a></li>
-                    <li><a href="coach-wallet.html">Wallet</a></li>
-                    <li><a href="coach-profile.html">Profile Settings</a></li>
-                    <li><a href="invoice.html">Invoice</a></li>
-                  </ul>
-                </li>
-                <li class="has-submenu">
-                  <a href="#">User <i class="fas fa-chevron-down"></i></a>
-                  <ul class="submenu">
-                    <li><a href="user-dashboard.html">User Dashboard</a></li>
-                    <li><a href="user-bookings.html">Bookings</a></li>
-                    <li><a href="user-chat.html">Chat</a></li>
-                    <li><a href="user-invoice.html">Invoice</a></li>
-                    <li><a href="user-wallet.html">Wallet</a></li>
-                    <li><a href="user-profile.html">Profile Edit</a></li>
-                    <li>
-                      <a href="user-setting-password.html">Change Password</a>
-                    </li>
-                    <li>
-                      <a href="user-profile-othersetting.html"
-                        >Other Settings</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="has-submenu">
-                  <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
-                  <ul class="submenu">
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="our-teams.html">Our Team</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li class="has-submenu">
-                      <a href="javascript:void(0);">Authentication</a>
-                      <ul class="submenu">
-                        <li><a href="register.html">Signup</a></li>
-                        <li><a href="login.html">Signin</a></li>
-                        <li>
-                          <a href="forgot-password.html">Forgot Password</a>
-                        </li>
-                        <li>
-                          <a href="change-password.html">Reset Password</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class="has-submenu">
-                      <a href="javascript:void(0);">Error Page</a>
-                      <ul class="submenu">
-                        <li><a href="error-404.html">404 Error</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="our-teams.html">Our Team</a></li>
-                    <li class="has-submenu">
-                      <a href="javascript:void(0);">Testimonials</a>
-                      <ul class="submenu">
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li>
-                          <a href="testimonials-carousel.html"
-                            >Testimonials Carousel</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="terms-condition.html">Terms & Conditions</a>
-                    </li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="maintenance.html">Maintenance</a></li>
-                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                  </ul>
-                </li>
-                <li class="has-submenu">
-                  <a href="#">Blog <i class="fas fa-chevron-down"></i></a>
-                  <ul class="submenu">
-                    <li><a href="blog-list.html">Blog List</a></li>
-                    <li class="has-submenu">
-                      <a href="javascript:void(0);">Blog List Sidebar</a>
-                      <ul class="submenu">
-                        <li>
-                          <a href="blog-list-sidebar-left.html"
-                            >Blog List Sidebar Left</a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-list-sidebar-right.html"
-                            >Blog List Sidebar Right</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="blog-grid.html">Blog Grid</a></li>
-                    <li class="has-submenu">
-                      <a href="javascript:void(0);">Blog Grid Sidebar</a>
-                      <ul class="submenu">
-                        <li>
-                          <a href="blog-grid-sidebar-left.html"
-                            >Blog Grid Sidebar Left</a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-grid-sidebar-right.html"
-                            >Blog Grid Sidebar Right</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="blog-details.html">Blog Details</a></li>
-                    <li class="has-submenu">
-                      <a href="javascript:void(0);">Blog Details Sidebar</a>
-                      <ul class="submenu">
-                        <li>
-                          <a href="blog-details-sidebar-left.html"
-                            >Blog Detail Sidebar Left</a
-                          >
-                        </li>
-                        <li>
-                          <a href="blog-details-sidebar-right.html"
-                            >Blog Detail Sidebar Right</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="blog-carousel.html">Blog Carousel</a></li>
-                  </ul>
-                </li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-                <li class="login-link">
-                  <a href="register.html">Sign Up</a>
-                </li>
-                <li class="login-link">
-                  <a href="login.html">Sign In</a>
-                </li>
-              </ul>
-            </div>
-            <ul class="nav header-navbar-rht logged-in">
-              <li class="nav-item">
-                <form class="header-search">
-                  <a class="nav-link" href="coaches-grid.html"
-                    ><i class="feather-search"></i
-                  ></a>
-                </form>
-              </li>
-              <!-- Notifications -->
-              <li class="nav-item dropdown noti-nav">
-                <a
-                  href="listing-grid.html"
-                  class="dropdown-toggle nav-link position-relative"
-                  data-bs-toggle="dropdown"
-                >
-                  <i class="feather-bell"></i> <span class="alert-bg"></span>
-                </a>
-                <div class="dropdown-menu notifications dropdown-menu-end">
-                  <div class="topnav-dropdown-header">
-                    <span class="notification-title">Notifications</span>
-                  </div>
-                  <div class="noti-content">
-                    <ul class="notification-list">
-                      <li class="notification-message">
-                        <a href="#">
-                          <div class="media d-flex">
-                            <span class="avatar">
-                              <img
-                                class="avatar-img"
-                                src="assets/img/profiles/avatar-01.jpg"
-                                alt="User"
-                              />
-                            </span>
-                            <div class="media-body">
-                              <h6>
-                                Sarah Sports Academy<span
-                                  class="notification-time"
-                                  >18.30 PM</span
-                                >
-                              </h6>
-                              <p class="noti-details">
-                                Sent a amount of $210 for his Appointment
-                                <span class="noti-title">Mr.Ruby perin </span>
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="notification-message">
-                        <a href="#">
-                          <div class="media d-flex">
-                            <span class="avatar">
-                              <img
-                                class="avatar-img"
-                                src="assets/img/profiles/avatar-02.jpg"
-                                alt="User"
-                              />
-                            </span>
-                            <div class="media-body">
-                              <h6>
-                                Badminton Academy<span class="notification-time"
-                                  >12 Min Ago</span
-                                >
-                              </h6>
-                              <p class="noti-details">
-                                has booked her appointment to
-                                <span class="noti-title">Mr. Hendry Watt</span>
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="notification-message">
-                        <a href="#">
-                          <div class="media d-flex">
-                            <div class="avatar">
-                              <img
-                                class="avatar-img"
-                                src="assets/img/profiles/avatar-03.jpg"
-                                alt="User"
-                              />
-                            </div>
-                            <div class="media-body">
-                              <h6>
-                                Manchester Academy<span
-                                  class="notification-time"
-                                  >6 Min Ago</span
-                                >
-                              </h6>
-                              <p class="noti-details">
-                                Sent a amount $710 for his Appointment
-                                <span class="noti-title">Mr.Maria Dyen</span>
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="notification-message">
-                        <a href="#">
-                          <div class="media d-flex">
-                            <div class="avatar avatar-sm">
-                              <img
-                                class="avatar-img"
-                                src="assets/img/profiles/avatar-04.jpg"
-                                alt="User"
-                              />
-                            </div>
-                            <div class="media-body">
-                              <h6>
-                                ABC Sports Academy<span
-                                  class="notification-time"
-                                  >8.30 AM</span
-                                >
-                              </h6>
-                              <p class="noti-details">
-                                Send a message to the Coach
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <!-- /Notifications -->
-
-              <!-- User Menu -->
-              <li class="nav-item dropdown has-arrow logged-item">
-                <a
-                  href="#"
-                  class="dropdown-toggle nav-link"
-                  data-bs-toggle="dropdown"
-                >
-                  <span class="user-img">
-                    <img
-                      class="rounded-circle"
-                      src="assets/img/profiles/avatar-05.jpg"
-                      width="31"
-                      alt="Darren Elder"
-                    />
-                  </span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end">
-                  <div class="user-header">
-                    <div class="avatar avatar-sm">
-                      <img
-                        src="assets/img/profiles/avatar-05.jpg"
-                        alt="User"
-                        class="avatar-img rounded-circle"
-                      />
-                    </div>
-                    <div class="user-text">
-                      <h6>Henriques</h6>
-                      <a href="user-profile.html" class="text-profile mb-0"
-                        >Go to Profile</a
-                      >
-                    </div>
-                  </div>
-                  <p>
-                    <a class="dropdown-item" href="coach-profile.html"
-                      >Settings</a
-                    >
-                  </p>
-                  <p><a class="dropdown-item" href="login.html">Logout</a></p>
-                </div>
-              </li>
-              <!-- /User Menu -->
-              <li class="nav-item">
-                <a class="nav-link btn btn-secondary" href="add-court.html"
-                  ><span><i class="feather-check-circle"></i></span>List Your
-                  Court</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+    		<header class="header header-trans">
+			<div class="container-fluid">
+				<nav class="navbar navbar-expand-lg header-nav">
+					<div class="navbar-header">
+						<a id="mobile_btn" href="javascript:void(0);">
+							<span class="bar-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+						<a href="index.html" class="navbar-brand logo">
+							<img src="assets/img/logo.svg" class="img-fluid" alt="Logo">
+						</a>
+					</div>
+					<div class="main-menu-wrapper">
+						<div class="menu-header">
+							<a href="index.html" class="menu-logo">
+								<img src="assets/img/logo-black.svg" class="img-fluid" alt="Logo">
+							</a>
+							<a id="menu_close" class="menu-close" href="javascript:void(0);"> <i class="fas fa-times"></i></a>
+						</div>
+						<ul class="main-nav">
+							<li class="active"><a href="index.html">Home</a></li>
+							
+							
+							
+						
+							<li><a href="court-booking.html">Book A Court</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Venues</a></li>
+							<li><a href="contact-us.html">Contact Us</a></li>
+							<li class="login-link">
+								<a href="register.html">Sign Up</a>
+							</li>
+							<li class="login-link">
+								<a href="login.html">Sign In</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item">
+							<div class="nav-link btn btn-white log-register">
+								<a href="backend/web"><span><i class="feather-users"></i></span>Login</a> / <a href="register.html">Register</a>
+							</div>
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
+		</header>
       <!-- /Header -->
 
       <!-- Breadcrumb -->
@@ -573,11 +223,11 @@
 
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" name="namee" class="form-control" id="name" placeholder="Enter Name" required>
+            <input type="text" name="namee" class="form-control" id="name" placeholder="Enter Name">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Address" required>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email Address">
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Phone Number</label>
@@ -586,7 +236,7 @@
         </div>
         <div class="mb-3">
             <label for="name" class="form-label">Your Address</label>
-            <input type="text" name="address" class="form-control" id="address" placeholder="Enter Address" required>
+            <input type="text" name="address" class="form-control" id="address" placeholder="Enter Address">
         </div>
 
         <button type="submit" class="btn btn-secondary btn-icon mt-3">

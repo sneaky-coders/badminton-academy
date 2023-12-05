@@ -294,3 +294,51 @@ Stack trace:
 [01-Dec-2023 00:31:52 America/Boise] PHP Notice:  Undefined index: email in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 10
 [01-Dec-2023 00:32:19 America/Boise] PHP Notice:  Undefined index: name in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 9
 [01-Dec-2023 00:32:19 America/Boise] PHP Notice:  Undefined index: email in /home3/idzzdcmy/public_html/createmysiteco/badminton/checkout.php on line 10
+[04-Dec-2023 13:08:55 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[04-Dec-2023 13:08:55 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home3/idzzdcmy/public_html/createmysiteco/badminton/connection.php on line 8
+[04-Dec-2023 13:09:34 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[04-Dec-2023 13:09:36 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 661
+[04-Dec-2023 13:09:40 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 661
+[04-Dec-2023 13:09:49 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 661
+[04-Dec-2023 13:09:49 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php:1) in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 701
+[04-Dec-2023 13:10:27 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 661
+[04-Dec-2023 13:10:46 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 661
+[04-Dec-2023 13:10:51 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 661
+[04-Dec-2023 13:10:58 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 661
+[04-Dec-2023 21:48:32 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[04-Dec-2023 21:48:34 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 21:48:46 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 21:49:34 America/Boise] Twilio Error: [HTTP 401] Unable to create record: Authenticate
+[04-Dec-2023 21:49:34 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/receipt.php:127) in /home3/idzzdcmy/public_html/createmysiteco/badminton/receipt.php on line 128
+[04-Dec-2023 21:51:24 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/receipt.php:127) in /home3/idzzdcmy/public_html/createmysiteco/badminton/receipt.php on line 128
+[04-Dec-2023 21:51:57 America/Boise] Twilio Error: [HTTP 401] Unable to create record: Authenticate
+[04-Dec-2023 22:06:15 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[04-Dec-2023 22:06:17 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 22:06:26 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 22:11:19 America/Boise] Twilio Error: [HTTP 400] Unable to create record: Twilio could not find a Channel with the specified From address
+[04-Dec-2023 22:17:51 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[04-Dec-2023 22:17:53 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 22:18:04 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 22:18:44 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/idzzdcmy/public_html/createmysiteco/badminton/receipt.php:127) in /home3/idzzdcmy/public_html/createmysiteco/badminton/receipt.php on line 128
+[04-Dec-2023 22:21:27 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[04-Dec-2023 22:21:29 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 22:21:59 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 22:22:40 America/Boise] Twilio Error: [HTTP 400] Unable to create record: Twilio could not find a Channel with the specified From address
+[04-Dec-2023 22:33:57 America/Boise] Twilio Error: [HTTP 400] Unable to create record: The 'To' number whatsapp:+919096245373 is not a valid phone number.
+[04-Dec-2023 22:38:17 America/Boise] Twilio Error: [HTTP 400] Unable to create record: The 'To' number whatsapp:+919096245373 is not a valid phone number.
+[04-Dec-2023 22:43:55 America/Boise] WhatsApp message sent successfully. SID: SM9a2b31d020b08e5430359df7290c9cf0
+[04-Dec-2023 22:58:25 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[04-Dec-2023 22:58:27 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 22:58:46 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 23:01:13 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 23:01:19 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 23:03:35 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 23:04:29 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 662
+[04-Dec-2023 23:05:41 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 312
+[04-Dec-2023 23:05:54 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 312
+[05-Dec-2023 01:08:49 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[05-Dec-2023 01:08:52 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 312
+[05-Dec-2023 01:12:25 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/booking.php on line 12
+[05-Dec-2023 01:12:28 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 312
+[05-Dec-2023 01:12:45 America/Boise] PHP Warning:  session_start(): Cannot start session when headers already sent in /home3/idzzdcmy/public_html/createmysiteco/badminton/bookings.php on line 312
+[05-Dec-2023 01:13:27 America/Boise] WhatsApp message sent successfully. SID: SM27fbda85c7805f1e946e0d7de01c21c5

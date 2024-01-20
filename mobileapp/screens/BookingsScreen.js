@@ -61,6 +61,7 @@ const CustomerScreen = ({ navigation }) => {
 
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      
       <View style={styles.container}>
      
 

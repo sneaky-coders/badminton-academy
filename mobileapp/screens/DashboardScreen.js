@@ -1,13 +1,14 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text, TouchableOpacity, Modal, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, StyleSheet, ImageBackground, StatusBar } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import BookingsScreen from './BookingsScreen';
 import CustomerScreen from './CustomerScreen';
 import PaymentScreen from './PaymentScreen';
-import { useFocusEffect } from '@react-navigation/native';
+import SubMenu from './SubMenu';
 
-// New DataCard component with icons
+const Tab = createBottomTabNavigator();
+
 const DataCard = ({ title, value, icon }) => (
   <View style={styles.dataCard}>
     <FontAwesome5 name={icon} size={24} color="#3498db" style={styles.dataCardIcon} />
@@ -16,30 +17,22 @@ const DataCard = ({ title, value, icon }) => (
   </View>
 );
 
-const Tab = createBottomTabNavigator();
-
 const DashboardScreen = ({ navigation }) => {
   const [isLogoutModalVisible, setLogoutModalVisible] = useState(false);
-  const [showLogoutButton, setShowLogoutButton] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState(false);
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <TouchableOpacity onPress={() => setLogoutModalVisible(true)}>
-          {showLogoutButton && (
-            <FontAwesome5 name="sign-out-alt" color="blue" size={24} style={{ marginRight: 15 }} />
-          )}
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <TouchableOpacity onPress={() => setShowSubMenu(true)}>
+            <FontAwesome5 name="cog" size={24} color="#3498db" style={{ marginRight: 15 }} />
+          </TouchableOpacity>
+        </View>
       ),
       headerLeft: () => null,
     });
-  }, [navigation, setLogoutModalVisible, showLogoutButton]);
-
-  useFocusEffect(() => {
-    setShowLogoutButton(true);
-
-    return () => setShowLogoutButton(false);
-  });
+  }, [navigation, setLogoutModalVisible, showSubMenu]);
 
   const handleLogout = () => {
     // Implement your logout logic here
@@ -47,9 +40,20 @@ const DashboardScreen = ({ navigation }) => {
     navigation.navigate('Login'); // Replace 'Login' with the actual name of your login screen
   };
 
+  const handleProfile = () => {
+    // Implement navigation to the profile screen
+     navigation.navigate('Profile'); // Uncomment and replace 'Profile' with the actual name of your profile screen
+   
+    setShowSubMenu(false);
+  };
+
+  const handleCloseSubMenu = () => {
+    setShowSubMenu(false);
+  };
+
   return (
     <View style={{ flex: 1 }}>
-      {/* Your tab navigator here */}
+      <StatusBar barStyle="light-content" />
       <Tab.Navigator>
         <Tab.Screen
           name="Dashboard"
@@ -89,7 +93,14 @@ const DashboardScreen = ({ navigation }) => {
         />
       </Tab.Navigator>
 
-      {/* Logout Confirmation Popup */}
+      {showSubMenu && (
+        <SubMenu
+          onClose={handleCloseSubMenu}
+          onProfilePress={handleProfile}
+          onLogoutPress={handleLogout}
+        />
+      )}
+
       <Modal transparent={true} visible={isLogoutModalVisible} animationType="slide">
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
@@ -109,91 +120,9 @@ const DashboardScreen = ({ navigation }) => {
   );
 };
 
-// Styles for the DashboardScreen
 const styles = StyleSheet.create({
-    backgroundImage: {
-        flex: 1,
-        resizeMode: 'cover',
-      },
-      modalContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-      modalContent: {
-        backgroundColor: 'white',
-        padding: 20,
-        borderRadius: 10,
-        elevation: 5,
-      },
-      buttonContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        marginTop: 10,
-      },
-      logoutButton: {
-        color: 'red',
-        fontSize: 16,
-      },
-      cancelButton: {
-        color: 'blue',
-        fontSize: 16,
-      },
-      dataCardContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        marginTop: 20,
-      },
-      dataCard: {
-        backgroundColor: 'white',
-        padding: 15,
-        borderRadius: 10,
-        elevation: 5,
-        marginBottom: 20,
-      },
-      dataCardTitle: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginBottom: 5,
-      },
-      dataCardValue: {
-        fontSize: 18,
-      },
-    
-      dataCardContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        marginTop: 20,
-      },
-      dataCard: {
-        backgroundColor: 'white',
-        padding: 15,
-        borderRadius: 10,
-        elevation: 5,
-        marginBottom: 20,
-        alignItems: 'center',
-      },
-      dataCardIcon: {
-        marginBottom: 10,
-      },
-      dataCardTitle: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#333',
-      },
-      dataCardValue: {
-        fontSize: 18,
-        color: '#3498db',
-      },
-
-  dataCardContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginTop: 20,
-  },
   dataCard: {
-    width: '48%', // Adjust the width to allow space for margins
+    width: '48%',
     backgroundColor: 'white',
     padding: 15,
     borderRadius: 10,
@@ -213,22 +142,41 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#3498db',
   },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+    elevation: 5,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 10,
+  },
+  logoutButton: {
+    color: 'red',
+    fontSize: 16,
+  },
+  cancelButton: {
+    color: 'blue',
+    fontSize: 16,
+  },
 });
 
-// DashboardContent component
 const DashboardContent = () => {
   const backgroundImage = require("../assets/bg2.jpg");
   return (
-    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-      <View>
-        <View style={styles.dataCardContainer}>
-          {/* Custom data cards */}
-          <DataCard title="Total Bookings" value="25" icon="book" />
-          <DataCard title="Total Customers" value="50" icon="users" />
-          <DataCard title="Total Revenue" value="$5000" icon="dollar-sign" />
-          <DataCard title="Paid Bookings" value="$5000" icon="info" />
-          {/* Add more DataCard components as needed */}
-        </View>
+    <ImageBackground source={backgroundImage} style={{ flex: 1, resizeMode: 'cover' }}>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', marginTop: 20 }}>
+        <DataCard title="Total Bookings" value="25" icon="book" />
+        <DataCard title="Total Customers" value="50" icon="users" />
+        <DataCard title="Total Revenue" value="$5000" icon="dollar-sign" />
+        <DataCard title="Paid Bookings" value="$5000" icon="info" />
       </View>
     </ImageBackground>
   );

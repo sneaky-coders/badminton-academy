@@ -46,6 +46,16 @@ const DashboardScreen = ({ navigation }) => {
     <View style={{ flex: 1 }}>
       {/* Your tab navigator here */}
       <Tab.Navigator>
+
+      <Tab.Screen
+        name="Dashboard"
+        component={DashboardContent}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="home" color={color} size={size} />
+          ),
+        }}
+      />
         {/* Other tab screens */}
         <Tab.Screen
           name="Bookings"
@@ -56,6 +66,8 @@ const DashboardScreen = ({ navigation }) => {
             ),
           }}
         />
+
+        
         <Tab.Screen
           name="Customers"
           component={CustomerScreen}
@@ -122,5 +134,13 @@ const styles = StyleSheet.create({
     color: 'blue',
   },
 });
+
+const DashboardContent = () => {
+  return (
+    <View>
+      <Text>Welcome to the Dashboard!</Text>
+    </View>
+  );
+};
 
 export default DashboardScreen;

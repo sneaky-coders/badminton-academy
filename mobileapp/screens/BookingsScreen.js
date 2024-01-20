@@ -4,7 +4,6 @@ import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity, Image } fr
 import { Table, Row } from 'react-native-table-component';
 import { Card, Icon } from 'react-native-elements';
 
-
 const CustomerScreen = ({ navigation }) => {
   const [customers, setCustomers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -44,11 +43,11 @@ const CustomerScreen = ({ navigation }) => {
   };
 
   const renderTableData = () => {
-    return customers.map((customer) => (
+    return customers.map((customer, index) => (
       <Row
         key={customer.id}
         data={[
-          customer.id.toString(),
+          (index + 1).toString(), // Display serial number (index + 1)
           customer.name,
           customer.email,
           <TouchableOpacity onPress={() => handleView(customer)}>
@@ -70,7 +69,7 @@ const CustomerScreen = ({ navigation }) => {
           <Card containerStyle={styles.cardContainer}>
             <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
               <Row
-                data={['ID', 'Name', 'Email', 'Actions']}
+                data={['Sr No', 'Name', 'Email', 'Actions']}
                 style={styles.head}
                 textStyle={styles.headText}
               />
@@ -82,6 +81,7 @@ const CustomerScreen = ({ navigation }) => {
         <Modal animationType="slide" transparent={true} visible={isModalVisible}>
           <View style={styles.modalContainer}>
             <View style={styles.modalContent}>
+              {/* Modal content here */}
               <Text style={styles.modalTitle}>Booking Details</Text>
 
               <View style={styles.centered}>
@@ -91,8 +91,7 @@ const CustomerScreen = ({ navigation }) => {
               </View>
 
               <View style={styles.detailsContainer}>
-              <Image source={require("../assets/user.jpg")} style={styles.customerImage} />
-
+                <Image source={require("../assets/user.jpg")} style={styles.customerImage} />
                 <Text style={styles.detailText}><Icon name="user" type="font-awesome" color="#517fa4" /> Name: {selectedCustomer?.name}</Text>
                 <Text style={styles.detailText}><Icon name="envelope" type="font-awesome" color="#517fa4" /> Email: {selectedCustomer?.email}</Text>
                 <Text style={styles.detailText}><Icon name="phone" type="font-awesome" color="#517fa4" /> Contact: {selectedCustomer?.contact}</Text>
@@ -100,9 +99,9 @@ const CustomerScreen = ({ navigation }) => {
                 <Text style={styles.detailText}><Icon name="calendar" type="font-awesome" color="#517fa4" /> Booking Date: {selectedCustomer?.date}</Text>
                 <Text style={styles.detailText}><Icon name="clock-o" type="font-awesome" color="#517fa4" /> Start Time: {selectedCustomer?.starttime}</Text>
                 <Text style={styles.detailText}><Icon name="clock-o" type="font-awesome" color="#517fa4" /> End Time: {selectedCustomer?.endtime}</Text>
-                <Text style={styles.detailText}><Icon name="users" type="font-awesome" color="#517fa4" /> Adults: {selectedCustomer?.adults}</Text>
-                <Text style={styles.detailText}><Icon name="users" type="font-awesome" color="#517fa4" /> Children: {selectedCustomer?.children}</Text>
-                <Text style={styles.detailText}><Icon name="users" type="font-awesome" color="#517fa4" /> Young Children: {selectedCustomer?.young_children}</Text>
+                <Text style={styles.detailText}><Icon name="user" type="font-awesome" color="#517fa4" /> Adults: {selectedCustomer?.adults}</Text>
+                <Text style={styles.detailText}><Icon name="user" type="font-awesome" color="#517fa4" /> Children: {selectedCustomer?.children}</Text>
+                <Text style={styles.detailText}><Icon name="user" type="font-awesome" color="#517fa4" /> Young Children: {selectedCustomer?.young_children}</Text>
                 {/* Add more details as needed */}
               </View>
 

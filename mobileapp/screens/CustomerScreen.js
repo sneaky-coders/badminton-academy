@@ -42,13 +42,12 @@ const CustomerScreen = ({ navigation }) => {
     setSelectedCustomer(customer);
     setModalVisible(true);
   };
-
   const renderTableData = () => {
-    return customers.map((customer) => (
+    return customers.map((customer, index) => (
       <Row
         key={customer.id}
         data={[
-          customer.id.toString(),
+          (index + 1).toString(), // Display serial number (index + 1)
           customer.name,
           customer.email,
           <TouchableOpacity onPress={() => handleView(customer)}>
@@ -60,6 +59,8 @@ const CustomerScreen = ({ navigation }) => {
     ));
   };
 
+  
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -70,7 +71,7 @@ const CustomerScreen = ({ navigation }) => {
           <Card containerStyle={styles.cardContainer}>
             <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
               <Row
-                data={['ID', 'Name', 'Email', 'Actions']}
+                data={['Sr No', 'Name', 'Email', 'Actions']}
                 style={styles.head}
                 textStyle={styles.headText}
               />

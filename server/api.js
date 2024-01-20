@@ -44,4 +44,21 @@ router.get('/customer', (req, res) => {
   });
 });
 
+
+router.get('/payments', async (req, res) => {
+  try {
+    const results = await db.query(`
+      SELECT booking.*, court.name, court.email, court.contact
+      FROM booking
+      JOIN court ON booking.court_id = court.id
+    `);
+
+    res.json({ success: true, payments: results });
+  } catch (err) {
+    handleErrors(res, err, 'Error executing MySQL query for payment data:');
+  }
+});
+
+
+
 module.exports = router;

@@ -27,6 +27,12 @@ const DashboardScreen = ({ navigation }) => {
     });
   }, [navigation, setLogoutModalVisible, showLogoutButton]);
 
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => null,
+    });
+  }, [navigation]);
+
   // Use useFocusEffect to detect screen focus
   useFocusEffect(() => {
     // When the screen is focused, show the logout button
@@ -56,7 +62,16 @@ const DashboardScreen = ({ navigation }) => {
           ),
         }}
       />
-        {/* Other tab screens */}
+        <Tab.Screen
+          name="Customers"
+          component={CustomerScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome5 name="users" color={color} size={size} />
+            ),
+          }}
+        />
+   
         <Tab.Screen
           name="Bookings"
           component={BookingsScreen}
@@ -68,15 +83,7 @@ const DashboardScreen = ({ navigation }) => {
         />
 
         
-        <Tab.Screen
-          name="Customers"
-          component={CustomerScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome5 name="users" color={color} size={size} />
-            ),
-          }}
-        />
+      
         <Tab.Screen
           name="Payments"
           component={PaymentScreen}

@@ -31,7 +31,7 @@ const LoginScreen = ({ navigation }) => {
 
       if (response.ok) {
         // User successfully logged in
-        Alert.alert("Login Successful");
+      
         navigation.navigate("Dashboard");
         // Navigate to the Dashboard or perform other actions.
         // navigation.navigate('Dashboard');

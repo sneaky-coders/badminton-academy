@@ -1,6 +1,6 @@
 // CustomerScreen.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity, Image } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity , Image} from 'react-native';
 import { Table, Row } from 'react-native-table-component';
 import { Card, Icon } from 'react-native-elements';
 
@@ -79,7 +79,7 @@ const CustomerScreen = ({ navigation }) => {
           </Card>
         )}
 
-        <Modal animationType="slide" transparent={true} visible={isModalVisible}>
+<Modal animationType="slide" transparent={true} visible={isModalVisible}>
           <View style={styles.modalContainer}>
             <View style={styles.modalContent}>
               <Text style={styles.modalTitle}>Booking Details</Text>
@@ -96,14 +96,7 @@ const CustomerScreen = ({ navigation }) => {
                 <Text style={styles.detailText}><Icon name="user" type="font-awesome" color="#517fa4" /> Name: {selectedCustomer?.name}</Text>
                 <Text style={styles.detailText}><Icon name="envelope" type="font-awesome" color="#517fa4" /> Email: {selectedCustomer?.email}</Text>
                 <Text style={styles.detailText}><Icon name="phone" type="font-awesome" color="#517fa4" /> Contact: {selectedCustomer?.contact}</Text>
-                <Text style={styles.detailText}><Icon name="map" type="font-awesome" color="#517fa4" /> Location: {selectedCustomer?.location}</Text>
-                <Text style={styles.detailText}><Icon name="calendar" type="font-awesome" color="#517fa4" /> Booking Date: {selectedCustomer?.date}</Text>
-                <Text style={styles.detailText}><Icon name="clock-o" type="font-awesome" color="#517fa4" /> Start Time: {selectedCustomer?.starttime}</Text>
-                <Text style={styles.detailText}><Icon name="clock-o" type="font-awesome" color="#517fa4" /> End Time: {selectedCustomer?.endtime}</Text>
-                <Text style={styles.detailText}><Icon name="users" type="font-awesome" color="#517fa4" /> Adults: {selectedCustomer?.adults}</Text>
-                <Text style={styles.detailText}><Icon name="users" type="font-awesome" color="#517fa4" /> Children: {selectedCustomer?.children}</Text>
-                <Text style={styles.detailText}><Icon name="users" type="font-awesome" color="#517fa4" /> Young Children: {selectedCustomer?.young_children}</Text>
-                {/* Add more details as needed */}
+                
               </View>
 
               <TouchableOpacity onPress={() => setModalVisible(false)}>
@@ -112,7 +105,6 @@ const CustomerScreen = ({ navigation }) => {
             </View>
           </View>
         </Modal>
-
       </View>
     </ScrollView>
   );
@@ -160,16 +152,7 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 50,
     marginBottom: 10,
-    marginLeft:50,
-  },
-  centered: {
-    alignItems: 'center',
-  },
-  detailsContainer: {
-    marginTop: 10,
-  },
-  detailText: {
-    marginBottom: 5,
+    marginLeft:50
   },
 });
 

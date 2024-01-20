@@ -1,8 +1,14 @@
-// api.js
 const express = require('express');
 const router = express.Router();
 const db = require('./db');
 
+// Middleware for handling errors
+const handleErrors = (res, error, message) => {
+  console.error(message, error);
+  res.status(500).json({ error: 'Internal Server Error' });
+};
+
+// Login route with parameterized query
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
 
@@ -10,8 +16,7 @@ router.post('/login', (req, res) => {
   // Example query: SELECT * FROM users WHERE username = ? AND password = ?;
   db.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, results) => {
     if (err) {
-      console.error('Error executing MySQL query:', err);
-      res.status(500).json({ error: 'Internal Server Error' });
+      handleErrors(res, err, 'Error executing MySQL query for login:');
       return;
     }
 
@@ -22,6 +27,20 @@ router.post('/login', (req, res) => {
       // Invalid credentials
       res.status(401).json({ error: 'Invalid credentials' });
     }
+  });
+});
+
+// Customer route with parameterized query
+router.get('/customer', (req, res) => {
+  // Perform a simple query to get all customers from the 'court' table
+  db.query('SELECT * FROM court', (err, results) => {
+    if (err) {
+      handleErrors(res, err, 'Error executing MySQL query for customer data:');
+      return;
+    }
+
+    // Send the results as JSON
+    res.json({ success: true, customers: results });
   });
 });
 

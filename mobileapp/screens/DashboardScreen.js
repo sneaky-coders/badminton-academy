@@ -1,10 +1,11 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Text, TouchableOpacity, Modal, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, StyleSheet, ImageBackground } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import BookingsScreen from './BookingsScreen';
 import CustomerScreen from './CustomerScreen';
 import PaymentScreen from './PaymentScreen';
+
 
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -20,16 +21,19 @@ const Tab = createBottomTabNavigator();
 const DashboardScreen = ({ navigation }) => {
   const [isLogoutModalVisible, setLogoutModalVisible] = useState(false);
   const [showLogoutButton, setShowLogoutButton] = useState(false);
+  const backgroundImage = require("../assets/bg.png").default;
+
+
+  console.log('Background Image Path:', backgroundImage);
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
         <TouchableOpacity onPress={() => setLogoutModalVisible(true)}>
-        {showLogoutButton && (
-          <FontAwesome5 name="sign-out-alt" color="blue" size={24} style={{ marginRight: 15 }} />
-        )}
-      </TouchableOpacity>
-      
+          {showLogoutButton && (
+            <FontAwesome5 name="sign-out-alt" color="blue" size={24} style={{ marginRight: 15 }} />
+          )}
+        </TouchableOpacity>
       ),
     });
   }, [navigation, setLogoutModalVisible, showLogoutButton]);
@@ -56,10 +60,13 @@ const DashboardScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
-      {/* Your tab navigator here */}
-    
-      <Tab.Navigator>
+    <ImageBackground source={require("../assets/bg.png")} style={styles.backgroundImage}>
+    {/* ... rest of the code ... */}
+  
+  
+      <View style={{ flex: 1 }}>
+        {/* Your tab navigator here */}
+        <Tab.Navigator>
 
       <Tab.Screen
         name="Dashboard"
@@ -105,23 +112,24 @@ const DashboardScreen = ({ navigation }) => {
        
       </Tab.Navigator>
 
-      {/* Logout Confirmation Popup */}
-      <Modal transparent={true} visible={isLogoutModalVisible} animationType="slide">
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text>Are you sure you want to logout?</Text>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity onPress={handleLogout}>
-                <Text style={styles.logoutButton}>Logout</Text>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => setLogoutModalVisible(false)}>
-                <Text style={styles.cancelButton}>Cancel</Text>
-              </TouchableOpacity>
+        {/* Logout Confirmation Popup */}
+        <Modal transparent={true} visible={isLogoutModalVisible} animationType="slide">
+          <View style={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <Text>Are you sure you want to logout?</Text>
+              <View style={styles.buttonContainer}>
+                <TouchableOpacity onPress={handleLogout}>
+                  <Text style={styles.logoutButton}>Logout</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => setLogoutModalVisible(false)}>
+                  <Text style={styles.cancelButton}>Cancel</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-        </View>
-      </Modal>
-    </View>
+        </Modal>
+      </View>
+    </ImageBackground>
   );
 };
 
@@ -168,12 +176,17 @@ const styles = StyleSheet.create({
   dataCardValue: {
     fontSize: 18,
   },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+  },
 });
 
 const DashboardContent = () => {
   return (
     <View>
-       <View style={styles.dataCardContainer}>
+      <View style={styles.dataCardContainer}>
         {/* Custom data cards */}
         <DataCard title="Total Bookings" value="25" />
         <DataCard title="Total Customers" value="50" />

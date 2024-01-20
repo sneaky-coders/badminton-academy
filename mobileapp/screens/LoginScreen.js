@@ -1,7 +1,7 @@
 // LoginScreen.js
 import React, { useState } from 'react';
-import { View, ImageBackground, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
-import { Card, Input, Button as RNEButton } from 'react-native-elements';
+import { View, ImageBackground, StyleSheet, Alert } from 'react-native';
+import { Input, Button, Card } from 'react-native-elements';
 
 const backgroundImage = require('../assets/bg.png'); // Adjust the path based on your file location
 
@@ -9,65 +9,74 @@ const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Validate input
-    if (!username || !password) {
-      // Display an error message or toast
-      return;
-    }
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('http://192.168.0.9:3000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
 
-    // Implement your login logic here
-    // For simplicity, let's navigate to the Dashboard screen
-    navigation.navigate('Dashboard');
+      const data = await response.json();
+
+      if (response.ok) {
+        // User successfully logged in
+        Alert.alert('Login Successful');
+        navigation.navigate('Dashboard');
+        // Navigate to the Dashboard or perform other actions.
+        // navigation.navigate('Dashboard');
+      } else {
+        // Handle login failure
+        Alert.alert('Login Failed', data.error);
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
   };
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}
-    >
-      <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-        <View style={styles.cardContainer}>
-          <Card>
-            <Card.Title style={styles.cardTitle}>Login</Card.Title>
-            <Card.Divider />
-            <Input
-              placeholder="Username"
-              value={username}
-              onChangeText={(text) => setUsername(text)}
-              leftIcon={{ type: 'font-awesome', name: 'user' }}
-            />
-            <Input
-              placeholder="Password"
-              value={password}
-              onChangeText={(text) => setPassword(text)}
-              secureTextEntry
-              leftIcon={{ type: 'font-awesome', name: 'lock' }}
-            />
-            <RNEButton title="Login" onPress={handleLogin} />
-          </Card>
-        </View>
-      </ImageBackground>
-    </KeyboardAvoidingView>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <View style={styles.container}>
+        <Card containerStyle={styles.cardContainer}>
+          <Card.Title h4>Login</Card.Title>
+          <Input
+            placeholder="Username"
+            value={username}
+            onChangeText={(text) => setUsername(text)}
+            leftIcon={{ type: 'font-awesome', name: 'user' }}
+          />
+          <Input
+            placeholder="Password"
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+            secureTextEntry
+            leftIcon={{ type: 'font-awesome', name: 'lock' }}
+          />
+          <Button title="Login" onPress={handleLogin} />
+        </Card>
+      </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   backgroundImage: {
     flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'center',
   },
   cardContainer: {
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    padding: 16,
     borderRadius: 10,
-  },
-  cardTitle: {
-    fontSize: 24,
-    marginBottom: 16,
+    padding: 20,
+    width: 300,
   },
 });
 

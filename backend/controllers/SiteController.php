@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 use app\controller\ContactForm;
 use app\models\Event;
 use app\models\Set1;
-use app\models\Set2;
+use app\models\Booking;
 
 
 class SiteController extends Controller
@@ -73,9 +73,17 @@ class SiteController extends Controller
             
            
     
+            $accentureData = Booking::find()
+            ->select(['transactionid', 'amount'])
+            ->where(['status' => 'paid'])
+            ->asArray()
+            ->all();
+    
         return $this->render('index', [
-         
+            
+            'accentureData' => $accentureData,
         ]);
+    
     
             
            

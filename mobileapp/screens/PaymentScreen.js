@@ -1,6 +1,6 @@
 // PaymentScreen.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity, Image } from 'react-native';
 import { Table, Row } from 'react-native-table-component';
 import { Card, Icon } from 'react-native-elements';
 
@@ -10,6 +10,7 @@ const PaymentScreen = ({ navigation }) => {
   const [error, setError] = useState(null);
   const [selectedPayment, setSelectedPayment] = useState(null);
   const [isModalVisible, setModalVisible] = useState(false);
+  const profile = require("../assets/user.jpg");
 
   useEffect(() => {
     // Fetch payment data when the component mounts
@@ -83,15 +84,20 @@ const PaymentScreen = ({ navigation }) => {
           <View style={styles.modalContainer}>
             <View style={styles.modalContent}>
               <Text style={styles.modalTitle}>Payment Details</Text>
-
+              <View style={styles.centered}>
+       
+                  <Image source={profile} style={styles.customerImage} />
+               
+              </View>
               <View style={styles.detailsContainer}>
-                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> ID: {selectedPayment?.id}</Text>
+              <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> Name: {selectedPayment?.court_name}</Text>
+                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" />  Email: {selectedPayment?.court_email}</Text>
+                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" />  Contact: {selectedPayment?.court_contact}</Text>
                 <Text style={styles.detailText}><Icon name="list-alt" type="font-awesome" color="#517fa4" /> Order ID: {selectedPayment?.orderid}</Text>
-                <Text style={styles.detailText}><Icon name="dollar" type="font-awesome" color="#517fa4" /> Amount: {selectedPayment?.amount}</Text>
+                <Text style={styles.detailText}><Icon name="list-alt" type="font-awesome" color="#517fa4" /> Transaction ID: {selectedPayment?.transactionid}</Text>
+                <Text style={styles.detailText}><Icon name="rupee" type="font-awesome" color="#517fa4" /> Amount: {selectedPayment?.amount}</Text>
                 <Text style={styles.detailText}><Icon name="info" type="font-awesome" color="#517fa4" /> Status: {selectedPayment?.status}</Text>
-                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> Court Name: {selectedPayment?.court_name}</Text>
-                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> Court Email: {selectedPayment?.court_email}</Text>
-                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> Court Contact: {selectedPayment?.court_contact}</Text>
+                
                 {/* Add more details as needed */}
               </View>
 
@@ -148,6 +154,13 @@ const styles = StyleSheet.create({
   },
   detailText: {
     marginBottom: 5,
+  },
+  customerImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 10,
+    marginLeft:80,
   },
 });
 

@@ -8,6 +8,13 @@ import PaymentScreen from './PaymentScreen';
 
 import { useFocusEffect } from '@react-navigation/native';
 
+const DataCard = ({ title, value }) => (
+  <View style={styles.dataCard}>
+    <Text style={styles.dataCardTitle}>{title}</Text>
+    <Text style={styles.dataCardValue}>{value}</Text>
+  </View>
+);
+
 const Tab = createBottomTabNavigator();
 
 const DashboardScreen = ({ navigation }) => {
@@ -51,6 +58,7 @@ const DashboardScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       {/* Your tab navigator here */}
+    
       <Tab.Navigator>
 
       <Tab.Screen
@@ -140,12 +148,37 @@ const styles = StyleSheet.create({
   cancelButton: {
     color: 'blue',
   },
+  dataCardContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 20,
+  },
+  dataCard: {
+    backgroundColor: 'white',
+    padding: 15,
+    borderRadius: 10,
+    elevation: 5,
+    marginBottom: 20,
+  },
+  dataCardTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  dataCardValue: {
+    fontSize: 18,
+  },
 });
 
 const DashboardContent = () => {
   return (
     <View>
-      <Text>Welcome to the Dashboard!</Text>
+       <View style={styles.dataCardContainer}>
+        {/* Custom data cards */}
+        <DataCard title="Total Bookings" value="25" />
+        <DataCard title="Total Customers" value="50" />
+        <DataCard title="Total Revenue" value="$5000" />
+      </View>
     </View>
   );
 };

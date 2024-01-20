@@ -47,8 +47,8 @@ router.get('/customer', (req, res) => {
 
 router.get('/payments', async (req, res) => {
   try {
-    const results = await db.query(`
-      SELECT booking.*, court.name, court.email, court.contact
+    const [results] = await db.promise().query(`
+      SELECT booking.*, court.name AS court_name, court.email AS court_email, court.contact AS court_contact
       FROM booking
       JOIN court ON booking.court_id = court.id
     `);
@@ -58,6 +58,7 @@ router.get('/payments', async (req, res) => {
     handleErrors(res, err, 'Error executing MySQL query for payment data:');
   }
 });
+
 
 
 

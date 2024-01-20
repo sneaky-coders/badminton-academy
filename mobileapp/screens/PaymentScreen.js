@@ -1,6 +1,6 @@
 // PaymentScreen.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity, Image } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { Table, Row } from 'react-native-table-component';
 import { Card, Icon } from 'react-native-elements';
 
@@ -50,6 +50,7 @@ const PaymentScreen = ({ navigation }) => {
           payment.orderid,
           payment.amount,
           payment.status,
+         
           <TouchableOpacity onPress={() => handleView(payment)}>
             <Icon name="eye" type="font-awesome" color="#517fa4" />
           </TouchableOpacity>,
@@ -88,6 +89,9 @@ const PaymentScreen = ({ navigation }) => {
                 <Text style={styles.detailText}><Icon name="list-alt" type="font-awesome" color="#517fa4" /> Order ID: {selectedPayment?.orderid}</Text>
                 <Text style={styles.detailText}><Icon name="dollar" type="font-awesome" color="#517fa4" /> Amount: {selectedPayment?.amount}</Text>
                 <Text style={styles.detailText}><Icon name="info" type="font-awesome" color="#517fa4" /> Status: {selectedPayment?.status}</Text>
+                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> Court Name: {selectedPayment?.court_name}</Text>
+                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> Court Email: {selectedPayment?.court_email}</Text>
+                <Text style={styles.detailText}><Icon name="id-card" type="font-awesome" color="#517fa4" /> Court Contact: {selectedPayment?.court_contact}</Text>
                 {/* Add more details as needed */}
               </View>
 
@@ -97,7 +101,6 @@ const PaymentScreen = ({ navigation }) => {
             </View>
           </View>
         </Modal>
-
       </View>
     </ScrollView>
   );

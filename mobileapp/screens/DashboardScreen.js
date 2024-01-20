@@ -6,7 +6,6 @@ import BookingsScreen from './BookingsScreen';
 import CustomerScreen from './CustomerScreen';
 import PaymentScreen from './PaymentScreen';
 
-
 import { useFocusEffect } from '@react-navigation/native';
 
 const DataCard = ({ title, value }) => (
@@ -21,10 +20,7 @@ const Tab = createBottomTabNavigator();
 const DashboardScreen = ({ navigation }) => {
   const [isLogoutModalVisible, setLogoutModalVisible] = useState(false);
   const [showLogoutButton, setShowLogoutButton] = useState(false);
-  const backgroundImage = require("../assets/bg.png").default;
-
-
-  console.log('Background Image Path:', backgroundImage);
+  
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -60,57 +56,47 @@ const DashboardScreen = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground source={require("../assets/bg.png")} style={styles.backgroundImage}>
-    {/* ... rest of the code ... */}
-  
-  
+   
       <View style={{ flex: 1 }}>
         {/* Your tab navigator here */}
         <Tab.Navigator>
-
-      <Tab.Screen
-        name="Dashboard"
-        component={DashboardContent}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="home" color={color} size={size} />
-          ),
-        }}
-      />
-        <Tab.Screen
-          name="Customers"
-          component={CustomerScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome5 name="users" color={color} size={size} />
-            ),
-          }}
-        />
-   
-        <Tab.Screen
-          name="Bookings"
-          component={BookingsScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome5 name="calendar" color={color} size={size} />
-            ),
-          }}
-        />
-
-        
-      
-        <Tab.Screen
-          name="Payments"
-          component={PaymentScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <FontAwesome5 name="credit-card" color={color} size={size} />
-            ),
-          }}
-        />
-
-       
-      </Tab.Navigator>
+          <Tab.Screen
+            name="Dashboard"
+            component={DashboardContent}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <FontAwesome5 name="home" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Customers"
+            component={CustomerScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <FontAwesome5 name="users" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Bookings"
+            component={BookingsScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <FontAwesome5 name="calendar" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Payments"
+            component={PaymentScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <FontAwesome5 name="credit-card" color={color} size={size} />
+              ),
+            }}
+          />
+        </Tab.Navigator>
 
         {/* Logout Confirmation Popup */}
         <Modal transparent={true} visible={isLogoutModalVisible} animationType="slide">
@@ -129,11 +115,15 @@ const DashboardScreen = ({ navigation }) => {
           </View>
         </Modal>
       </View>
-    </ImageBackground>
+ 
   );
 };
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
   modalContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -147,14 +137,16 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     marginTop: 10,
   },
   logoutButton: {
     color: 'red',
+    fontSize: 16,
   },
   cancelButton: {
     color: 'blue',
+    fontSize: 16,
   },
   dataCardContainer: {
     flexDirection: 'row',
@@ -176,15 +168,12 @@ const styles = StyleSheet.create({
   dataCardValue: {
     fontSize: 18,
   },
-  backgroundImage: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
 });
 
 const DashboardContent = () => {
+  const backgroundImage = require("../assets/bg2.jpg");
   return (
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
     <View>
       <View style={styles.dataCardContainer}>
         {/* Custom data cards */}
@@ -193,6 +182,7 @@ const DashboardContent = () => {
         <DataCard title="Total Revenue" value="$5000" />
       </View>
     </View>
+    </ImageBackground>
   );
 };
 

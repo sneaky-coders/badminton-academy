@@ -1,6 +1,6 @@
 // PaymentScreen.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity, Image } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { Table, Row } from 'react-native-table-component';
 import { Card, Icon } from 'react-native-elements';
 
@@ -11,6 +11,8 @@ const PaymentScreen = ({ navigation }) => {
   const [selectedPayment, setSelectedPayment] = useState(null);
   const [isModalVisible, setModalVisible] = useState(false);
   const profile = require("../assets/user.jpg");
+  const backgroundImage = require("../assets/bg2.jpg");
+
 
   useEffect(() => {
     // Fetch payment data when the component mounts
@@ -62,6 +64,7 @@ const PaymentScreen = ({ navigation }) => {
   };
 
   return (
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
     <ScrollView>
       <View style={styles.container}>
         {loading && <Text>Loading...</Text>}
@@ -109,10 +112,15 @@ const PaymentScreen = ({ navigation }) => {
         </Modal>
       </View>
     </ScrollView>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover',
+      },
   container: {
     flex: 1,
     justifyContent: 'center',

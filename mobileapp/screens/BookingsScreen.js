@@ -62,10 +62,7 @@ const CustomerScreen = ({ navigation }) => {
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
       <View style={styles.container}>
-        <View style={styles.header}>
-          {/* Add your header components here */}
-          <Text style={styles.headerText}>Customer List</Text>
-        </View>
+     
 
         <ScrollView style={styles.scrollView}>
           {loading && <ActivityIndicator size="large" color="#fff" style={styles.loadingIndicator} />}

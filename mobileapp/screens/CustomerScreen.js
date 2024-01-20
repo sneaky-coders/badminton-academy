@@ -1,6 +1,6 @@
 // CustomerScreen.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity , Image} from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Modal, TouchableOpacity , Image, ImageBackground} from 'react-native';
 import { Table, Row } from 'react-native-table-component';
 import { Card, Icon } from 'react-native-elements';
 
@@ -12,6 +12,7 @@ const CustomerScreen = ({ navigation }) => {
   const [selectedCustomer, setSelectedCustomer] = useState(null);
   const [isModalVisible, setModalVisible] = useState(false);
   const profile = require("../assets/user.jpg");
+  const backgroundImage = require("../assets/bg2.jpg");
 
   useEffect(() => {
     // Fetch customer data when the component mounts
@@ -62,6 +63,7 @@ const CustomerScreen = ({ navigation }) => {
   
 
   return (
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
     <ScrollView>
       <View style={styles.container}>
         {loading && <Text>Loading...</Text>}
@@ -108,17 +110,24 @@ const CustomerScreen = ({ navigation }) => {
         </Modal>
       </View>
     </ScrollView>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover',
+      },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   cardContainer: {
-    width: '80%',
+    width: '90%',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Semi-transparent white background
+    borderRadius: 10,
   },
   head: { height: 40, backgroundColor: '#f1f8ff' },
   headText: { margin: 6 },

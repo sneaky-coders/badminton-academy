@@ -44,6 +44,19 @@ router.get('/customer', (req, res) => {
   });
 });
 
+router.get('/graph', (req, res) => {
+  // Perform a simple query to get all customers from the 'court' table
+  db.query('SELECT * FROM booking', (err, results) => {
+    if (err) {
+      handleErrors(res, err, 'Error executing MySQL query for customer data:');
+      return;
+    }
+
+    // Send the results as JSON
+    res.json({ success: true, customers: results });
+  });
+});
+
 
 router.get('/payments', async (req, res) => {
   try {
@@ -69,6 +82,35 @@ router.get('/totalBookings', async (req, res) => {
   }
 });
 
+router.get('/totalCustomers', async (req, res) => {
+  try {
+    const [result] = await db.promise().query('SELECT COUNT(*) AS totalCustomers FROM court');
+    
+    res.json({ success: true, totalCustomers: result[0].totalCustomers });
+  } catch (err) {
+    handleErrors(res, err, 'Error executing MySQL query for total bookings:');
+  }
+});
+
+router.get('/totalRevenue', async (req, res) => {
+  try {
+    const [result] = await db.promise().query('SELECT SUM(amount) AS totalRevenue FROM booking');
+    
+    res.json({ success: true, totalRevenue: result[0].totalRevenue });
+  } catch (err) {
+    handleErrors(res, err, 'Error executing MySQL query for total bookings:');
+  }
+});
+
+router.get('/totalPaid', async (req, res) => {
+  try {
+    const [result] = await db.promise().query('SELECT COUNT(*) AS totalPaid FROM booking where status = "paid"');
+    
+    res.json({ success: true, totalPaid: result[0].totalPaid });
+  } catch (err) {
+    handleErrors(res, err, 'Error executing MySQL query for total bookings:');
+  }
+});
 
 
 

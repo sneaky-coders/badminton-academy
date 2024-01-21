@@ -19,7 +19,7 @@ const ProfileScreen = () => {
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
       <ScrollView contentContainerStyle={styles.container}>
-        <Image source={require("../assets/admin.jpg")} style={styles.profilePicture} />
+        <Image source={require("../assets/user.jpg")} style={styles.profilePicture} />
         <Text style={styles.title}>User Profile</Text>
 
         <View style={styles.userInfo}>

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useState, useEffect } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text, TouchableOpacity, Modal, StyleSheet, ImageBackground, StatusBar } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -6,6 +6,8 @@ import BookingsScreen from './BookingsScreen';
 import CustomerScreen from './CustomerScreen';
 import PaymentScreen from './PaymentScreen';
 import SubMenu from './SubMenu';
+import { LineChart } from 'react-native-chart-kit';
+import { Dimensions } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,6 +22,7 @@ const DataCard = ({ title, value, icon }) => (
 const DashboardScreen = ({ navigation }) => {
   const [isLogoutModalVisible, setLogoutModalVisible] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
+  
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -34,6 +37,8 @@ const DashboardScreen = ({ navigation }) => {
     });
   }, [navigation, setLogoutModalVisible, showSubMenu]);
 
+  
+
   const handleLogout = () => {
     // Implement your logout logic here
     // After logout, navigate to the login screen
@@ -42,8 +47,8 @@ const DashboardScreen = ({ navigation }) => {
 
   const handleProfile = () => {
     // Implement navigation to the profile screen
-     navigation.navigate('Profile'); // Uncomment and replace 'Profile' with the actual name of your profile screen
-   
+    // For now, it just navigates to a placeholder screen named 'Profile'
+    navigation.navigate('Profile'); // Replace 'Profile' with the actual name of your profile screen
     setShowSubMenu(false);
   };
 
@@ -64,6 +69,7 @@ const DashboardScreen = ({ navigation }) => {
             ),
           }}
         />
+        
         <Tab.Screen
           name="Customers"
           component={CustomerScreen}
@@ -97,7 +103,7 @@ const DashboardScreen = ({ navigation }) => {
         <SubMenu
           onClose={handleCloseSubMenu}
           onProfilePress={handleProfile}
-          onLogoutPress={handleLogout}
+          onLogoutPress={() => setLogoutModalVisible(true)}
         />
       )}
 
@@ -116,6 +122,9 @@ const DashboardScreen = ({ navigation }) => {
           </View>
         </View>
       </Modal>
+
+      {/* Use DataCard components with updated values */}
+     
     </View>
   );
 };
@@ -170,16 +179,77 @@ const styles = StyleSheet.create({
 
 const DashboardContent = () => {
   const backgroundImage = require("../assets/bg2.jpg");
+  const [totalBookings, setTotalBookings] = useState(0);
+  const [totalCustomers, setTotalCustomers] = useState(0);
+  const [totalRevenue, setTotalRevenue] = useState(0);
+  const [paidBookings, setPaidBookings] = useState(0);
+  const [orderData, setOrderData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from your endpoint here
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://192.168.0.9:3001/api/totalBookings'); 
+        const response1 = await fetch('http://192.168.0.9:3001/api/totalCustomers'); 
+        const response2 = await fetch('http://192.168.0.9:3001/api/totalRevenue'); 
+        const response3 = await fetch('http://192.168.0.9:3001/api/totalPaid'); 
+        const data = await response.json();
+        const data1 = await response1.json();
+        const data2 = await response2.json();
+        const data3 = await response3.json();
+
+        // Assuming your API response has fields like totalBookings, totalCustomers, totalRevenue, and paidBookings
+        setTotalBookings(data.totalBookings || 0);
+        setTotalCustomers(data1.totalCustomers || 0);
+        setTotalRevenue(data2.totalRevenue || 0);
+        setPaidBookings(data3.totalPaid || 0);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://192.168.0.9:3001/api/graph'); // Replace with your actual API endpoint
+        const data = await response.json();
+
+        // Assuming your API response has an array of orders with 'orderid' and 'amount' fields
+        setOrderData(data.orders || []);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const orderidData = orderData.map(order => order.orderid);
+  const amountData = orderData.map(order => order.amount);
+
+  const chartData = {
+    labels: orderidData,
+    datasets: [
+      {
+        data: amountData,
+      },
+    ],
+  };
+  
   return (
     <ImageBackground source={backgroundImage} style={{ flex: 1, resizeMode: 'cover' }}>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', marginTop: 20 }}>
-        <DataCard title="Total Bookings" value="25" icon="book" />
-        <DataCard title="Total Customers" value="50" icon="users" />
-        <DataCard title="Total Revenue" value="$5000" icon="dollar-sign" />
-        <DataCard title="Paid Bookings" value="$5000" icon="info" />
+        <DataCard title="Total Bookings" value={totalBookings.toString()} icon="book" />
+        <DataCard title="Total Customers" value={totalCustomers.toString()} icon="users" />
+        <DataCard title="Total Revenue" value={`₹${totalRevenue}`} icon="rupee-sign" />
+        <DataCard title="Paid Bookings" value={paidBookings.toString()} icon="info" />
       </View>
     </ImageBackground>
   );
 };
+
 
 export default DashboardScreen;

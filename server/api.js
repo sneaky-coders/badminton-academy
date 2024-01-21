@@ -59,6 +59,17 @@ router.get('/payments', async (req, res) => {
   }
 });
 
+router.get('/totalBookings', async (req, res) => {
+  try {
+    const [result] = await db.promise().query('SELECT COUNT(*) AS totalBookings FROM booking');
+    
+    res.json({ success: true, totalBookings: result[0].totalBookings });
+  } catch (err) {
+    handleErrors(res, err, 'Error executing MySQL query for total bookings:');
+  }
+});
+
+
 
 
 

@@ -17,11 +17,7 @@ const CustomerScreen = ({ navigation }) => {
   useEffect(() => {
     // Fetch customer data when the component mounts
     fetchCustomerData();
-    
-  },
-   []);
-   
-  
+  }, []);
 
   const fetchCustomerData = async () => {
     try {

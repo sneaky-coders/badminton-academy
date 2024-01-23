@@ -21,7 +21,7 @@ const PaymentScreen = ({ navigation }) => {
 
   const fetchPaymentData = async () => {
     try {
-      const response = await fetch('http://192.168.0.9:3001/api/payments');
+      const response = await fetch('http://10.30.19.146:3001/api/payments');
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

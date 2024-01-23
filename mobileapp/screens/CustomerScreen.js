@@ -21,7 +21,7 @@ const CustomerScreen = ({ navigation }) => {
 
   const fetchCustomerData = async () => {
     try {
-      const response = await fetch('http://192.168.0.9:3001/api/customer');
+      const response = await fetch('http://10.30.19.146:3001/api/customer');
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

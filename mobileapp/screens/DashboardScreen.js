@@ -189,10 +189,10 @@ const DashboardContent = () => {
     // Fetch data from your endpoint here
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.0.9:3001/api/totalBookings'); 
-        const response1 = await fetch('http://192.168.0.9:3001/api/totalCustomers'); 
-        const response2 = await fetch('http://192.168.0.9:3001/api/totalRevenue'); 
-        const response3 = await fetch('http://192.168.0.9:3001/api/totalPaid'); 
+        const response = await fetch('http://10.30.19.146:3001/api/totalBookings'); 
+        const response1 = await fetch('http://10.30.19.146:3001/api/totalCustomers'); 
+        const response2 = await fetch('http://10.30.19.146:3001/api/totalRevenue'); 
+        const response3 = await fetch('http://10.30.19.146:3001/api/totalPaid'); 
         const data = await response.json();
         const data1 = await response1.json();
         const data2 = await response2.json();
@@ -214,7 +214,7 @@ const DashboardContent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.0.9:3001/api/graph'); // Replace with your actual API endpoint
+        const response = await fetch('http://10.30.19.146:3001/api/graph'); // Replace with your actual API endpoint
         const data = await response.json();
 
         // Assuming your API response has an array of orders with 'orderid' and 'amount' fields
